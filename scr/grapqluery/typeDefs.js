@@ -4,6 +4,8 @@ const typeDefs = `#graphql
         id: ID!
         name: String!
         email: String!
+        createdAt: String
+        updatedAt: String
     }
 
     type AuthPayload {
@@ -17,6 +19,7 @@ const typeDefs = `#graphql
     }
 
     type Mutation {
+
         register(
             name: String!
             email: String!
@@ -27,9 +30,18 @@ const typeDefs = `#graphql
             email: String!
             password: String!
         ): AuthPayload!
+
+        updateUser(
+            id: ID!
+            name: String
+            email: String
+        ): User!
+
+        deleteUser(
+            id: ID!
+        ): Boolean!
     }
 `;
 
-
-
 export default typeDefs;
+
