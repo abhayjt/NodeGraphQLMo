@@ -7,3 +7,5 @@ frontend - Copy/
 frontend/node_modules
 
 frontend/.env
+
+.env
